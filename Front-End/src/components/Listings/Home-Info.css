@@ -1,0 +1,173 @@
+.home-detail {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .home-detail img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .home-info {
+    padding: 16px;
+    background: #fff;
+  }
+  
+  .home-info h1 {
+    margin: 0 0 16px 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .home-info p {
+    margin: 4px 0;
+    color: #666;
+  }
+  
+  .home-info .price {
+    font-size: 28px;
+    color: #E53935;
+    font-weight: bold;
+  }
+  
+  .home-actions {
+    background: #f7f7f7;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .home-actions button,
+  .home-actions a {
+    margin: 0 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0078d4;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .home-actions button:hover,
+  .home-actions a:hover {
+    background-color: #005ba1;
+  }
+  
+  /* Style for the back button specifically */
+  .home-actions .back-button {
+    background-color: #CCCCCC;
+  }
+  
+  .home-actions .back-button:hover {
+    background-color: #AAAAAA;
+  }
+  
+  /* Ensure that the buttons don't wrap onto multiple lines on small screens */
+  .home-actions button,
+  .home-actions a {
+    white-space: nowrap;
+  }
+  
+  /* Add responsiveness to the layout */
+  @media (max-width: 768px) {
+    .home-detail {
+      margin: 20px;
+    }
+  
+    .home-actions button,
+    .home-actions a {
+      display: block;
+      margin: 10px auto; /* Center buttons vertically */
+    }
+  }
+/* The Modal (background) */
+.modal {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  justify-content: center; /* Align content horizontally center */
+  align-items: center; /* Align content vertically center */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 450px; /* Could be more or less, depending on screen size */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  background-color: #ff0000; 
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.message-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+.send-button {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #03bf0f; 
+}
+.agent-info p {
+  margin: 5px 0;
+}
+.save-confirmation {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #daf5d7; /* Light green background for success message */
+  color: #1d643b; /* Dark green text for better readability */
+  border: 1px solid #c5e8b7; /* Slightly darker green border */
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+  
+  
+  

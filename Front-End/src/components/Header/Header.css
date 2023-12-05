@@ -1,0 +1,35 @@
+/* src/components/Header/Header.css */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  border-bottom: 2px solid #848484; /* Adjust the color as necessary */
+  z-index: 10;
+ 
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header-logo {
+  /* Adjust the logo size as necessary */
+  width: auto; /* Scale width auto to maintain aspect ratio */
+  height: 30px; /* Example size */
+}
+
+.logo-text {
+  font-size: 1rem;
+  color: #333; /* Adjust the color as necessary */
+}
+
+.login-button {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem; /* Ensures the button is aligned to the far right */
+  /* Further styling */
+}

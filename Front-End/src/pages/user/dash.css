@@ -1,0 +1,90 @@
+
+/* Main color variables */
+:root {
+  --main-bg-color: #f3f3f8;
+  --main-text-color: #333;
+  --main-accent-color: #4a90e2;
+  --secondary-text-color: #555;
+  --border-color: #ddd;
+}
+
+/* Apply a background color to the body for a non-bland look */
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: var(--main-accent-color);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Unified styles for collapsible */
+.collapsible {
+  background-color: white;
+  color: var(--main-text-color);
+  cursor: pointer;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the content inside collapsible */
+.content {
+  padding: 0 16px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Hover effect for the buttons */
+button:hover, .collapsible:hover {
+  background-color: var(--main-accent-color);
+    color: white;
+    box-shadow: 0 0 8px var(--main-accent-color);
+}
+
+/* Style for the main page button */
+.main-page-btn {
+  background-color: var(--main-accent-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Footer style if needed */
+.footer {
+  background-color: #fff;
+  color: var(--secondary-text-color);
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .collapsible, .content {
+      padding: 12px;
+  }
+
+  .main-page-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+  }
+}

@@ -1,0 +1,61 @@
+/* Main Header Styles */
+.main-header {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+ 
+  z-index: 10;
+  font-family: 'Montserrat-Regular', sans-serif; /* Apply Montserrat-Regular to main header */
+  
+}
+
+/* Sub Header Styles */
+.sub-header {
+  display: flex;
+  width: 90%;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px; /* Add padding for visual space inside the box */
+  background-color: white; /* Set a background color */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow for floating effect */
+  border-radius: 10px; /* Optional: rounded corners */
+  margin-bottom: 2px; /* Space below the filter box */
+  font-family: 'Montserrat-Regular', sans-serif; /* Apply Montserrat-Regular to sub header */
+
+}
+
+ 
+/* Style for each form control to ensure they do not appear squished */
+.sub-header .MuiFormControl-root {
+  min-width: 120px; /* Set a minimum width */
+  font-family: 'Montserrat-Regular', sans-serif; /* Apply Montserrat-Regular to form controls */
+}
+
+/* Style for the city text field */
+.sub-header .MuiTextField-root {
+  min-width: 180px; /* Set a minimum width for the city search bar */
+  font-family: 'Montserrat-Regular', sans-serif; /* Apply Montserrat-Regular to text fields */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .sub-header {
+    justify-content: center; /* Center the filters on small screens */
+    gap: 8px; /* Reduce gap on small screens */
+  }
+  
+  .sub-header .MuiFormControl-root,
+  .sub-header .MuiTextField-root {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 8px; /* Add some space below each field */
+  }
+
+  .sub-header .MuiButton-root {
+    width: 100%; /* Full width for the apply button on small screens */
+    font-family: 'Montserrat-SemiBold', sans-serif; /* Apply Montserrat-SemiBold to buttons */
+  }
+}

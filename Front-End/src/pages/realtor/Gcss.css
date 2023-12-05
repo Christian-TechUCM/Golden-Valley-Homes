@@ -1,0 +1,51 @@
+
+.outerCard {
+    margin: 16px;
+    padding: 16px;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    border-radius: 4px;
+  }
+  
+  .innerCard {
+    margin-top: 16px;
+    box-shadow: inset 0px 2px 4px -1px rgba(0,0,0,0.2), inset 0px 4px 5px 0px rgba(0,0,0,0.14), inset 0px 1px 10px 0px rgba(0,0,0,0.12);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding-bottom: 72px;
+  }
+  
+  .contentArea {
+    position: relative;
+    padding: 16px;
+  }
+  
+  .titleBox {
+  background-color: white;
+  color: var(--main-text-color);
+  cursor: pointer;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  }
+  
+  .titleBox:hover {
+    background-color: var(--main-accent-color);
+    color: white;
+    box-shadow: 0 0 8px var(--main-accent-color);
+  }
+  
+  
+  .addButton {
+    position: absolute;
+    right: 16px;
+    top: 32px; /* You might need to adjust this value */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .addButton:hover {
+    transform: scale(1.1);
+  }
+  

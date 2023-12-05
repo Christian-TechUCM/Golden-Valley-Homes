@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: local('Montserrat-Regular'), url('./static/Montserrat-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: local('Montserrat-SemiBold'), url('./static/Montserrat-SemiBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-Thin';
+    src: local('Montserrat-Thin'), url('./static/Montserrat-Thin.ttf') format('truetype');
+  }
+  

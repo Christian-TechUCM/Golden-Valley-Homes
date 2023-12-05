@@ -1,0 +1,49 @@
+id,address,price,square_feet,bedrooms,bathrooms,avail_stat,area_id
+1,"3201 Calgary, Atwater, CA 95301",350000,1950,3,2,Available ,0
+2,"1305 Tamarack Ave, Atwater, CA 95301",275000,1700,3,2,Available,0
+3,"2032 Carillo, Atwater, CA 95301",400000,2000,3,2,Available,0
+4,"713 Hogan Ct, Atwater, CA 95301",230000,1300,3,2,Available,0
+5,"307 Elm Ave, Atwater, CA 95301",650000,2500,2,1,Available,0
+6,"9111 Bell Dr, Atwater, CA 95301",500000,2750,2,1,Available,0
+7,"2591 Giannini Rd, Atwater, CA 95301",320000,1900,2,2,Available,0
+8,"1475 High St, Atwater, CA 95301",370000,1950,3,2,Available,0
+9,"1649 Lorraine Ct, Atwater, CA 95301",200000,1400,3,2,Available,0
+10,"2258 1st St, Atwater, CA 95301",450000,1750,2,1,Available,0
+11,"1170 Spruce Ave, Atwater, CA 95301",675000,2200,2,1,Available,0
+12,"1831 Santa Ynez Ct, Atwater, CA 95301",325000,1515,3,2,Available,0
+13,"10854 White Crane Rd, Atwater, CA 95301",300000,1600,2,1,Available,0
+14,"1810 Santa Ynez Ct, Atwater, CA 95301",525000,1990,3,2,Available,0
+15,"1629 Drakeley Ave, Atwater, CA 95301",230000,1120,3,2,Available,0
+16,"2863 Crest Rd, Atwater, CA 95301",750000,2700,2,1,Available,0
+17,"2970 Virginia St, Atwater, CA 95301",400000,2100,2,1,Available,0
+18,"132 E Clinton Ave, Atwater, CA 95301",315000,1615,2,2,Available,0
+19,"85 Rancho Grande Cir, Atwater, CA 95301",225000,1500,3,2,Available,0
+21,"500 Drakeley Ave, Atwater, CA 95301",230000,1100,3,2,Available,0
+22,"1324 Fairway Dr, Atwater, CA 95301",415000,1950,3,1,Available,0
+23,"1932 Sagewood Dr, Atwater, CA 95301",425000,2000,2,2,Available,0
+24,"1663 Savannah Ct, Atwater, CA 95301",450000,2115,3,2,Available,0
+25,"4580 W State Highway 140, Atwater, CA 95301",120000,1200,2,1,Available,0
+26,"2948 Hillcrest St, Atwater, CA 95301",345000,1700,2,1,Available,0
+27,"11567 Bell Dr, Atwater, CA 95301",712000,2915,2,1,Available,0
+28,"469 Elm Ave, Atwater, CA 95301",435000,2500,3,2,Available,0
+29,"2447 3rd St, Atwater, CA 95301",300000,1452,2,1,Available,0
+30,"1923 Bridlewood Dr, Atwater, CA 95301",270000,1540,2,1,Available,0
+31,"1990 High St, Atwater, CA 95301",430000,1905,3,2,Available,0
+32,"9248 Longview Rd, Atwater, CA 95301",550000,1600,3,1,Available,0
+33,"2913 Lucky Debonair St, Atwater, CA 95301",725000,2604,3,2,Available,0
+34,"1830 Green Sands Ave, Atwater, CA 95301",435000,2110,2,1,Available,0
+35,"1145 Persimmon Way, Atwater, CA 95301",290000,1433,2,1,Available,0
+36,"140 Seville Ct, Atwater, CA 95301",510000,1980,3,2,Available,0
+37,"2555 Applegate Rd, Atwater, CA 95301",325000,2100,3,2,Available,0
+38,"630 Juniper, Atwater, CA 95301",615000,2650,3,2,Available,0
+39,"1466 Elm Ave, Atwater, CA 95301",415000,1640,3,2,Available,0
+40,"2355 Atwater Blvd SPACE 23, Atwater, CA 95301 ",400000,1900,2,1,Available,0
+41,"1120 1st Street Atwater, CA 95301",900000,0.75,,,Available,0
+42,"3500 Atwater Blvd Atwater, CA 95301",1200000,1.12,,,Available,0
+43,"1510 Broadway Avenue Atwater, CA 95301",1400000,1.3,,,Available,0
+44,"1609 Atwater Blvd. Atwater, CA 95301",950000,1.1,,,Available,0
+45,"1025 Bellevue Road, Atwater, CA",2400000,1.7,,,Available,0
+46,"1496 N Buhach Road Atwater, CA 95301",1250000,1.4,,,Available,0
+47,"2000 Jetlift Drive Atwater, CA 95301",999000,0.9,,,Available,0
+48,"695 ATWATER BLVD. Atwater, CA 95301",2000000,1.6,,,Available,0
+49,"2689 1st Street Atwater, CA 95301",1500000,1.5,,,Available,0

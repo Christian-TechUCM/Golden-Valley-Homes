@@ -1,0 +1,156 @@
+
+
+def custom_address():
+    city = fake.random_element(elements=("Merced", "Atwater"))
+    street_address = fake.street_address()
+    state = "CA" 
+    zip_code = fake.zipcode_in_state(state_abbr=state)
+    
+    return f"{street_address}, {city}, {state}, {zip_code}"
+
+
+@app.cli.command("seed-db")
+def seed_db():
+    db.drop_all()
+    db.create_all()
+    areas = []
+    for _ in range(5):
+        area = Area(
+            name=fake.city(),
+            zip_code=fake.zipcode(),
+            city=fake.city(),
+            state=fake.state_abbr()
+        )
+        areas.append(area)
+        db.session.add(area)
+    db.session.commit()
+
+    # Seed the User
+    users = []
+    for _ in range(10):
+        user = User(
+            name=fake.name(),
+            email=fake.email(),
+            password=fake.password(),
+            user_type=random.choice(['normal', 'agent'])
+        )
+        users.append(user)
+        db.session.add(user)
+    db.session.commit()
+
+    # Seed the Agent
+    agents = []
+    for user in users:
+        if user.user_type == 'agent':
+            agent = Agent(
+                name=user.name,
+                contact_number=fake.phone_number(),
+                email=user.email
+            )
+            agents.append(agent)
+            db.session.add(agent)
+    db.session.commit()
+
+    # Seed the Home
+    homes = []
+    for area in areas:
+        for _ in range(2):  # Create 2 homes for each area
+            home = Home(
+                address=custom_address(),
+                price=fake.random_int(min=50000, max=500000),
+                square_feet=fake.random_int(min=1000, max=3000),
+                bedrooms=fake.random_int(min=1, max=5),
+                bathrooms=fake.random_int(min=1, max=3),
+                availability_status=fake.random_element(elements=('Available', 'Sold')),
+                area_id=area.id
+            )
+            homes.append(home)
+            db.session.add(home)
+    db.session.commit()
+
+    # Seed the Specification
+    specs = []
+    for _ in range(10):
+        spec = Specification(
+            spec_type=fake.random_element(elements=('Type1', 'Type2', 'Type3')),
+            description=fake.text(max_nb_chars=200)
+        )
+        specs.append(spec)
+        db.session.add(spec)
+    db.session.commit()
+
+    # Seed the HomeHasSpecification
+    for home in homes:
+        home_spec = HomeHasSpecification(
+            home_id=home.id,
+            spec_id=random.choice(specs).id
+        )
+        db.session.add(home_spec)
+    db.session.commit()
+
+    # Seed the Review
+    for _ in range(20):
+        review = Review(
+            user_id=random.choice(users).id,
+            rating=fake.random_int(min=1, max=5),
+            comment=fake.text(max_nb_chars=100),
+            home_id=random.choice(homes).id
+        )
+        db.session.add(review)
+    db.session.commit()
+
+    # Seed the UserViewsHome
+    for _ in range(20):
+        user_view = UserViewsHome(
+            user_id=random.choice(users).id,
+            home_id=random.choice(homes).id,
+            view_date=fake.past_datetime(start_date="-30d", tzinfo=None)
+        )
+        db.session.add(user_view)
+    db.session.commit()
+
+    # Seed the UserInteractsWithAgent
+    for _ in range(20):
+        user_agent_interaction = UserInteractsWithAgent(
+            user_id=random.choice(users).id,
+            agent_id=random.choice(agents).id,
+            interaction_date=fake.past_datetime(start_date="-30d", tzinfo=None),
+            interaction_type=fake.random_element(elements=('Call', 'Email', 'Visit'))
+        )
+        db.session.add(user_agent_interaction)
+    db.session.commit()
+
+    # Seed the AgentRepresentsHome
+    for agent in agents:
+        for _ in range(2):  # Let's say each agent represents 2 homes
+            agent_home = AgentRepresentsHome(
+                agent_id=agent.id,
+                home_id=random.choice(homes).id,
+                start_date=fake.past_date(start_date="-1y", tzinfo=None),
+                end_date=fake.future_date(end_date="+1y", tzinfo=None) if fake.boolean(chance_of_getting_true=50) else None
+            )
+            db.session.add(agent_home)
+    db.session.commit()
+
+
+
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './dash.css'; // Ensure this file has the styles you provided
+import { Link } from 'react-router-dom';
+import Chat from "./Chat.js";
+import HomeSaved from "./HomeListing.js";
+import UserEdit from "./EditUser.js";
+function Home() {
+  return (
+    <div className="home-container">
+      <UserEdit />
+      <HomeSaved />
+        <Chat/>
+    </div>
+  );
+}
+
+export default Home;

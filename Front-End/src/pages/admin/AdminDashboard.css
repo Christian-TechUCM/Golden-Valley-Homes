@@ -1,0 +1,6 @@
+iframe {
+    width: 100%;
+    height: calc(100vh - 80px); /* Adjust 80px to the combined height of your header/footer */
+    border: none;
+  }
+  

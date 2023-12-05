@@ -1,0 +1,80 @@
+/* src/pages/common/Home.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #eff3f6;
+}
+
+.content-container {
+  display: flex;
+  flex-grow: 1;
+  position: relative; /* Add relative positioning to create an anchor for absolute positioning */
+}
+
+.map-container,
+.listings-container {
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 100%; /* Ensure both containers take up full height */
+}
+
+.map-container {
+  flex: 1; /* Let the map container take up half of the available horizontal space */
+  width: 50%; /* Ensure the map container takes up 50% of the width */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.listings-container {
+  flex: 1; /* Let the listings container take up half of the available horizontal space */
+  width: 50%; /* Ensure the listings container takes up 50% of the width */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+/* Add this to your CSS file */
+
+/* Grayed-out background when the alert dialog is open */
+.alert-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* High z-index to ensure it's on top */
+}
+
+/* Style for the alert dialog container */
+.alert-dialog {
+  top: 300px;
+  left: 50vh;
+  width: auto; /* Or set a specific width */
+  max-width: 400px; /* Maximum width of the dialog */
+  z-index: 1000; /* Ensure it's above the backdrop */
+  border-radius: 20px;
+  padding: 10px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  
+}
+
+/* Add a media query for smaller screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Change flex direction to stack map above listings */
+  }
+
+  .map-container,
+  .listings-container {
+    width: 100%; /* Make both containers take up full width on smaller screens */
+    position: static; /* Reset the position for normal flow */
+  }
+}
